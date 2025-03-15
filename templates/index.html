@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAM Imager Tool</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="icon">💻</span> RAM Imager</h1>
+            <p class="subtitle">Forensic Memory Capture Tool</p>
+        </header>
+
+        <div class="form-card">
+            <div class="form-group">
+                <label for="investigatorName">Investigator Name</label>
+                <input type="text" id="investigatorName" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="investigatorID">Investigator ID</label>
+                    <input type="text" id="investigatorID" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="caseID">Case ID</label>
+                    <input type="text" id="caseID" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="caseName">Case Name</label>
+                <input type="text" id="caseName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="memoryID">Memory ID</label>
+                <input type="text" id="memoryID" required>
+            </div>
+
+            <button id="captureBtn" onclick="startCapture()">
+                <span class="btn-icon">📸</span> Capture Memory
+            </button>
+
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+                <div class="status-text" id="statusText">Ready</div>
+            </div>
+        </div>
+
+        <div class="output-container" id="outputContainer"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
